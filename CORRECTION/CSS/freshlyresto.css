@@ -1,0 +1,417 @@
+/*----------------------------------------------------------------------------------------
+                                IMPORTATION DE FICHIER 
+------------------------------------------------------------------------------------------*/
+@import url(./font-face.css); /*Importation du fichier font-face*/
+@import url(./normalize.css); /*Importation du fichier normalize*/
+@import url(../jQuery/slick/slick.css); /*Importation du fichier slick css*/
+@import url(../jQuery/slick/slick-theme.css); /*Importation du fichier theme de slick*/
+@import url(../CSS/dist/mixitup.min.js);
+/* @import url(../jQuery/slick/jquery-3.7.0.min.js); /*Importation du fichier jquery*/
+/*@import url(../jQuery/slick/slick.min.js); Importation du fichier plungin slick */
+
+/*-------------------------------------------------------------------------------------------
+                                RESET
+-------------------------------------------------------------------------------------------*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box; 
+
+}
+body{
+    font-size: 1.125rem;
+    font-family: "athiti";
+    margin: 0 auto;
+    max-width: 779px;
+}
+.header{
+    background-image: linear-gradient(180deg,#ece8e4, white,white);
+}
+.header,
+.footer{
+    text-align: center;
+}
+.header img{
+    width: 6rem;
+    padding-top: 2rem;
+}
+ul{
+    padding-left:0rem;
+    list-style-type: none;
+}
+.header h1{
+    margin-top: 0.7rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center; 
+    font-weight: 700; 
+    
+}
+ 
+.header h1::before,
+.header h1::after{
+    font-family:"font awesome 5 free";
+    content:"\f005";
+    color:#950000;
+    padding-inline: .5rem;
+    margin-block: auto;
+    font-size: 0.5rem;  
+}
+li a{
+    display: block;
+    text-decoration: none;
+    font-size: 1.20rem;
+    font-weight: 700;
+    color:#4c4343 ;
+    border-bottom: 1px solid #4c4343;
+    padding-block: 0.5rem;
+    background-color: #ebe3db;
+}
+.header li a:hover{
+    background-color:#950000;
+    color:white ;
+    transition: 1.5s;
+}
+.header li a:active,
+.effect,
+.header li a:focus{
+    background-color: #4c4343;
+    color:#ebe3db;
+    border: #4c4343;
+}
+.main{
+    margin: 2.5rem 1.25rem;
+}
+
+.main img{
+    width: 100%;
+    display: block;
+}
+body p{
+    font-weight: 600;
+    font-size: 0.75rem;
+
+}
+
+h2{
+    margin-top:2.5rem ;
+    font-family:"merienda";
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    display: flex;
+}
+h2::before,
+h2::after{
+    font-family:"font awesome 5 free";
+    content:"\f005";
+    color:#950000;
+    padding-inline: .5rem;
+    margin-block: auto;
+    font-size: 0.4rem;  
+}
+
+h3{
+    padding-top:1rem ;
+    font-family:"merienda";
+    font-size: 1rem;
+    font-weight: 800;
+    justify-content: center;
+    display: flex;
+}
+h3::before,
+h3::after{
+    font-family:"font awesome 5 free";
+    content:"\f005";
+    color:#950000;
+    padding-inline: .5rem;
+    margin-block: auto;
+    font-size: 0.4rem;
+}
+
+.menus{
+    background-color:#ebe3db ;
+    margin: .25rem;
+    padding-bottom: 1rem;
+    
+}
+
+.menus p{
+    border-bottom: 1px dashed #4c4343;
+    padding-block: .5rem;
+    padding-left: .5rem;
+    margin: 0rem;
+    
+
+}
+.menus p::before{
+    font-family:"font awesome 5 free";
+    content:"\f005";
+    color:#950000;
+    padding-inline: .5rem;
+    margin-block: auto;
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+.menus a{
+    display:flex;
+    margin:1rem;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4c4343;
+    border: 1px solid #4c4343;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.menus a:hover{
+     background-color:#950000;
+    color:white ;
+    transition: 1s;
+}
+.menus a img{
+    width: 16px;
+    margin: 0.5rem;
+}
+
+.prix:hover img{
+    opacity: 0.4;
+    transition: 2s;
+   
+    
+}
+.prix:hover .cout{
+    opacity:1;
+    transition: 2s;
+    
+}
+
+.prix{
+    background-color: rgba(76,67,67,.9);
+    position: relative;
+}
+
+.prix .cout{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border: 4px solid #ebe3db; 
+    color: white;
+    opacity: 0;
+}
+
+.cout .f-size{
+    font-size: 3.5rem;
+    display: block;
+    font-style: normal;
+}
+.cout span{
+    font-style: italic;
+    font-weight: 400;
+}
+.footer1{
+    /* border:4px solid red; */
+    background-image: url(../../instructions/ressources/images/footer-bg.jpg);
+    color: white;
+
+}
+
+.footer1 h4{
+    border-bottom: 1px dashed white;
+    font-family: "merienda";
+    font-size: 0.75rem;
+    padding-bottom:0.5rem;
+}
+
+.footer1 section{
+    padding: 1rem;
+}
+.footer1 section span{
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    margin: 0.5rem;
+}
+.footer section a,
+.footer section address
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
+}
+.footer2{
+    background-color: #444444;
+    color: white;
+    padding: 1rem;
+    
+}
+.footer2 a{
+    color:white;
+}
+.menus .couts span{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items:center;
+   font-size: 0.75rem;
+   margin-top: 0rem;
+   font-weight: 500;
+   font-style: normal;
+} 
+.menus .couts{
+    padding-top: 0.75rem;
+    margin-inline:0.5rem ;
+}
+.movie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: auto;
+}
+
+.trie{
+    margin-bottom: 1.75rem ;
+    margin-top: 1rem;
+    
+   
+}
+.trie,
+.trie p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.trie h2{
+    margin-top: 0rem;
+    
+}
+.trie1{
+    display: flex;
+    justify-content:center;   
+}
+.trie1 button{
+    padding: 0.5rem 1rem;
+    color: #4c4343;
+    border: 1px solid#ebe3db;
+    background-color: #ebe3db;
+    font-size: 0.65rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 900;
+    margin-block:1rem;
+    margin-inline:0.5rem ;
+}
+
+.trie1 button:hover{
+    background-color:#950000;
+    color:white ;
+}
+
+.trie .grid{
+    background-color:#ebe3db;
+    padding: 1rem 0.5rem;
+     
+}
+
+.grid{
+    display:inline-grid;
+    grid-template-rows:repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem 0.5rem;
+
+}
+
+.fish1{
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row-start:1 ;
+    grid-row-end: 2;
+}
+.meat3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:2 ;
+    grid-row-end: 3;
+}
+.meat1{
+        grid-column-start:1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+}
+.meat2{
+    grid-column-start:1;
+    grid-column-end: 2;
+    grid-row-start:4 ;
+    grid-row-end:5 ;
+}
+
+.vegan3{
+    grid-column-start:2;
+    grid-column-end:3 ;
+    grid-row-start:1;
+    grid-row-end:2;
+}
+
+
+.fish2{
+    grid-column-start:2;
+    grid-column-end: 3;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.vegan2{
+    grid-column-start:2 ;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.fish3{
+    grid-column-start:2 ;
+    grid-column-end: 3;
+    grid-row-start:4 ;
+    grid-row-end:5 ;
+}
+
+.vegan1{
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row-start:5;
+    grid-row-end:6;
+    width:50%;
+}
+
+.desert-03{
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row-start:2;
+    grid-row-end:3;
+    width:50%;
+}
+
+.drink-03{
+    grid-column-start:1;
+    grid-column-end: 3;
+    grid-row-start:2;
+    grid-row-end:3;
+    width:50%;
+}
+.grid div p img{
+    width: 25%;
+    margin-bottom: 0.5rem;
+}
+
+ 
